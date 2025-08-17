@@ -130,5 +130,15 @@ If the user is engaging in discussion, try to steer them towards getting in touc
 
 if __name__ == "__main__":
     me = Me()
-    gr.ChatInterface(me.chat, type="messages").launch()
+    
+    # Create a custom interface with header
+    with gr.Blocks(title="Career Conversation with Sergei LERNER") as demo:
+        gr.Markdown("# 🚀 Career Conversation with Sergei LERNER")
+        gr.Markdown("Welcome! I'm Sergei LERNER's AI assistant. Ask me anything about my career, background, skills, and experience.")
+        gr.Markdown("---")
+        
+        # Chat interface
+        gr.ChatInterface(me.chat, type="messages")
+    
+    demo.launch()
     
