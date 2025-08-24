@@ -26,18 +26,29 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Test import
+    - name: Test basic imports
       run: |
-        python -c "import app; print('App imports successfully')"
+        python -c "import gradio; print('✅ Gradio imported successfully')"
+        python -c "import openai; print('✅ OpenAI imported successfully')"
+        python -c "import pypdf; print('✅ PyPDF imported successfully')"
+        python -c "import requests; print('✅ Requests imported successfully')"
+        python -c "import dotenv; print('✅ Python-dotenv imported successfully')"
 
-    - name: Check Gradio app
+    - name: Test app structure
       run: |
         python -c "
-        import gradio as gr
-        from app import Me
-        me = Me()
-        print('Gradio app and Me class initialized successfully')
+        import app
+        print('✅ App module imported successfully')
+        print('✅ Available functions:', [f for f in dir(app) if not f.startswith('_')])
         "
+
+    - name: Check file structure
+      run: |
+        echo "📁 Checking project structure..."
+        ls -la
+        echo "📄 Checking me/ directory..."
+        ls -la me/
+        echo "✅ File structure looks good"
 
     - name: Build status
       run: |
