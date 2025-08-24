@@ -48,6 +48,23 @@ python app.py
 
 The chatbot will be available at the local URL provided by Gradio (typically `http://localhost:7860`).
 
+## Deployment
+
+### Hugging Face Spaces
+
+This project is configured to automatically deploy to Hugging Face Spaces via GitHub Actions. To enable this:
+
+1. Create a Hugging Face account and get your access token
+2. Add the token as a GitHub secret named `HF_TOKEN`
+3. Push to the main branch to trigger automatic deployment
+
+### Manual Deployment
+
+To deploy manually to Hugging Face Spaces:
+```bash
+gradio deploy --title "Career Conversation with Sergei LERNER"
+```
+
 ## Project Structure
 
 ```
@@ -58,6 +75,8 @@ career_conversation/
 ├── me/                # Personal information
 │   ├── linkedin.pdf   # LinkedIn profile
 │   └── summary.txt    # Career summary
+├── .github/           # GitHub Actions workflows
+│   └── workflows/     # CI/CD configuration
 └── .gitignore         # Git ignore file
 ```
 

@@ -1,4 +1,4 @@
-name: Run Python script
+name: Deploy to Hugging Face Spaces
 
 on:
   push:
@@ -6,23 +6,44 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.9'
+        python-version: '3.11'
 
-    - name: Install Gradio
-      run: python -m pip install gradio
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install huggingface_hub
 
-    - name: Log in to Hugging Face
-      run: python -c 'import huggingface_hub; huggingface_hub.login(token="${{ secrets.hf_token }}")'
-
-    - name: Deploy to Spaces
-      run: gradio deploy
+    - name: Deploy to Hugging Face Spaces
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        python -c "
+        import os
+        import subprocess
+        import sys
+        
+        # Set Hugging Face token
+        os.environ['HF_TOKEN'] = '${{ secrets.HF_TOKEN }}'
+        
+        # Deploy using gradio deploy
+        try:
+            result = subprocess.run(['gradio', 'deploy', '--title', 'Career Conversation with Sergei LERNER'], 
+                                  capture_output=True, text=True, check=True)
+            print('Deployment successful!')
+            print(result.stdout)
+        except subprocess.CalledProcessError as e:
+            print('Deployment failed:')
+            print(e.stderr)
+            sys.exit(1)
+        "
