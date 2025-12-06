@@ -1,6 +1,30 @@
-My name is Sergei Lerner. I’m an ERP specialist turned AI and automation engineer, 
-with a passion for building smart systems that connect data, people, and technology. 
-I’m based in Israel, though my work (and curiosity) often takes me across the globe. 
-Outside of code and workflows, I’m into travel, tennis, and sauna sessions that reset the mind. 
-I also have a deep love for music—especially when it plays through my Sonos system, 
-which I’ve fine-tuned to perfection.
+SERGEI LERNER, ERP AUTOMATION AND AI INTEGRATION SPECIALIST
+
+Professional Summary:
+Experienced ERP and automation specialist with more than 13 years working with Priority ERP including system architecture, pricing logic, custom workflows, and advanced API integrations. Strong background in developing AI powered automation solutions that bridge legacy ERP systems with modern agentic frameworks.
+
+Current Focus:
+• Building end to end AI driven workflows that integrate Priority ERP with LLMs, MCP servers, IoT platforms and automation tools.
+• Designing and deploying AI agents for business processes including operations optimization, pricing intelligence, data insights and real time decision support.
+• Implementing cloud ready architectures, REST and OData integrations, and custom Priority extensions.
+• Developing production grade solutions using Python, FastAPI, Node.js, Docker, n8n, Zapier and SmartThings.
+
+Key Skills:
+• Priority ERP implementation and customization
+• API integration, Web SDK, MCP integration
+• AI agent orchestration using LangChain, LangGraph, CrewAI and AutoGen
+• Data engineering basics and Python for data analysis
+• Automation design with n8n, Zapier and custom scripts
+• Smart home and IoT integrations with SmartThings, MQTT and Sonos
+• Building chatbots and AI assistants for ERP systems
+• Cloud deployments on AWS and containerized environments
+
+Recent Achievements:
+• Built a Priority MCP server from scratch, enabling AI agent connectivity to Priority ERP.
+• Delivered AI driven solutions showcased to Priority Software executives including CEO, VP of AI and senior management.
+• Developed MedOp, an AI medical opinion generator accepted to AWS for deployment.
+• Completed multiple AI and data related courses including AI for Everyone, Intro to IoT, Power BI and AI agent engineering.
+• Created personal AI brand and portfolio including GitHub Pages site and AI powered tooling ecosystem.
+
+Career Direction:
+Positioning as an ERP and GenAI integration specialist combining deep Priority ERP expertise with hands on AI engineering to deliver automated business solutions for modern enterprises.
