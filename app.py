@@ -126,21 +126,62 @@ If the user is engaging in discussion, try to steer them towards getting in touc
             else:
                 done = True
         return response.choices[0].message.content
+
+
+def respond(message, history):
+    """Handle chat responses"""
+    if not message:
+        return history
     
+    # Convert history format from Chatbot to messages format
+    messages_history = []
+    for msg in history:
+        if msg["role"] == "user":
+            messages_history.append({"role": "user", "content": msg["content"]})
+        else:
+            messages_history.append({"role": "assistant", "content": msg["content"]})
+    
+    response = respond.me_instance.chat(message, messages_history)
+    
+    # Create new history with user message and bot response
+    new_history = history + [
+        {"role": "user", "content": message},
+        {"role": "assistant", "content": response}
+    ]
+    
+    return new_history
+
 
 if __name__ == "__main__":
     me = Me()
     
-    # Welcome message from the bot
+    # Store me instance in the respond function for access
+    respond.me_instance = me
+    
+    # Welcome message
     welcome_message = "Hello! I'm Sergei LERNER, an ERP Automation and AI Integration Specialist with over 13 years of experience working with Priority ERP, specializing in system architecture, AI-powered automation solutions, and advanced API integrations. I'm here to answer questions about my career, background, skills, and experience. Feel free to ask me anything!"
     
     # Create a custom interface
     with gr.Blocks(title="Career Conversation with Sergei LERNER") as demo:
-        # Chat interface with initial welcome message
-        gr.ChatInterface(
-            me.chat, 
+        chatbot = gr.Chatbot(
+            value=[{"role": "assistant", "content": welcome_message}],
             type="messages",
-            value=[[None, welcome_message]]
+            height=600
+        )
+        msg = gr.Textbox(
+            label="Message",
+            placeholder="Type your message here...",
+            container=False,
+            scale=7
+        )
+        submit_btn = gr.Button("Send", variant="primary", scale=1)
+        
+        # Handle message submission
+        msg.submit(respond, [msg, chatbot], chatbot).then(
+            lambda: "", None, msg
+        )
+        submit_btn.click(respond, [msg, chatbot], chatbot).then(
+            lambda: "", None, msg
         )
     
     demo.launch()
