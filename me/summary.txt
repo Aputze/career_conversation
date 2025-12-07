@@ -1,30 +1,234 @@
-SERGEI LERNER, ERP AUTOMATION AND AI INTEGRATION SPECIALIST
 
-Professional Summary:
-Experienced ERP and automation specialist with more than 13 years working with Priority ERP including system architecture, pricing logic, custom workflows, and advanced API integrations. Strong background in developing AI powered automation solutions that bridge legacy ERP systems with modern agentic frameworks.
+SERGEI LERNER: ADVANCED ERP ARCHITECT, AI INTEGRATION ENGINEER AND AUTOMATION INNOVATOR
 
-Current Focus:
-• Building end to end AI driven workflows that integrate Priority ERP with LLMs, MCP servers, IoT platforms and automation tools.
-• Designing and deploying AI agents for business processes including operations optimization, pricing intelligence, data insights and real time decision support.
-• Implementing cloud ready architectures, REST and OData integrations, and custom Priority extensions.
-• Developing production grade solutions using Python, FastAPI, Node.js, Docker, n8n, Zapier and SmartThings.
+ULTRA DETAILED PROFESSIONAL AND TECHNICAL PROFILE
+For AI Career Conversation Systems
 
-Key Skills:
-• Priority ERP implementation and customization
-• API integration, Web SDK, MCP integration
-• AI agent orchestration using LangChain, LangGraph, CrewAI and AutoGen
-• Data engineering basics and Python for data analysis
-• Automation design with n8n, Zapier and custom scripts
-• Smart home and IoT integrations with SmartThings, MQTT and Sonos
-• Building chatbots and AI assistants for ERP systems
-• Cloud deployments on AWS and containerized environments
+INTRODUCTION:
+Sergei Lerner is a multidisciplinary ERP architect, automation engineer and AI integration specialist with more than 13 years of hands on experience in Priority ERP and modern AI frameworks. His unique value comes from engineering new capabilities inside legacy systems while simultaneously designing future ready architectures that merge ERP, AI, IoT and automation. This document expands every technical detail to allow an AI career bot to fully understand the scope of his experience, achievements and expertise.
 
-Recent Achievements:
-• Built a Priority MCP server from scratch, enabling AI agent connectivity to Priority ERP.
-• Delivered AI driven solutions showcased to Priority Software executives including CEO, VP of AI and senior management.
-• Developed MedOp, an AI medical opinion generator accepted to AWS for deployment.
-• Completed multiple AI and data related courses including AI for Everyone, Intro to IoT, Power BI and AI agent engineering.
-• Created personal AI brand and portfolio including GitHub Pages site and AI powered tooling ecosystem.
+---------------------------------------------------------------------
+SECTION 1: PRIORITY ERP DOMAIN EXPERTISE
+---------------------------------------------------------------------
 
-Career Direction:
-Positioning as an ERP and GenAI integration specialist combining deep Priority ERP expertise with hands on AI engineering to deliver automated business solutions for modern enterprises.
+Priority ERP System Administration and Architecture:
+• Deep familiarity with Priority ERP since 2011 across multiple organizations.
+• Expertise in system configuration, multi company architecture, user permissions, roles, security groups and authorization models.
+• Proficiency in database structure, table relationships, triggers, transactional integrity and normalization methodologies.
+• Experience working with Priority Oracle based and MS SQL based infrastructures.
+
+Priority Customizations:
+• Design of complex workflows using status definitions, procedure triggers, email alerts and rule based automation.
+• Advanced form design: custom fields, dynamic forms, user input validations, embedded logic scripts, linked forms and multi step forms.
+• Knowledge of Priority report builder, HTML and Excel based reporting.
+• Implementation of personalization layers and user specific preferences.
+• Development of price calculation logic, multi segment pricing, quantity breaks, discount matrices and vendor customer tiering.
+• Extensive experience with documents: ORDERS, CUSTOMERS, ITEMS, INVENTORY, PURCHASES, SERVICE CALLS, MANUFACTURING WORK ORDERS.
+
+Priority Development Layer:
+• SQL procedures and triggers for data manipulation.
+• Use of Priority internal scripting fields, expressions and logic blocks.
+• Web SDK integration including operations such as GETFORM, INSERTDOC, LOADTABLE, RUNFORM, and invoking procedures externally.
+• OData interface work including filtering, pagination, parameter passing and scheduled reads.
+
+Data Integrity and Performance:
+• Expertise in monitoring slow queries, indexing strategies, optimizing joins and reducing heavy form loads.
+• Understanding of Priority caching strategies and data refresh techniques.
+
+---------------------------------------------------------------------
+SECTION 2: AI ENGINEERING AND MULTI AGENT SYSTEMS
+---------------------------------------------------------------------
+
+LLM Technological Stack:
+• OpenAI GPT 3.5, GPT 4, GPT 4 Turbo, GPT 4o, GPT 4o mini.
+• Structured outputs using JSON, Pydantic, tool definitions and automatic schema validation.
+• Prompt engineering for system messages, role conditioning, chain of thought, planning, action selection and controlled responses.
+
+Agent Frameworks and Orchestration:
+• LangChain: agents, tools, prompts, retrieval, embeddings, memory, chains and callbacks.
+• LangGraph: state based workflows, nodes, edges, reducer functions, event driven logic and graph orchestration.
+• AutoGen: multi agent collaborative problem solving, chat based task assignments, thought loops and evaluators.
+• CrewAI: hierarchical workflows, team based agent processes, planner agent, researcher agent and executor agent.
+• Semantic Kernel exposure and embeddings integration.
+
+Retrieval and Knowledge Systems:
+• Vector embeddings for ERP data representation.
+• Hybrid retrieval using metadata filters.
+• Document chunking and context windows optimized for Priority datasets.
+
+Structured Reasoning Development:
+• Step wise action planning for ERP use cases.
+• Multi stage reasoning for data validation, cross table correlation, data enrichment and summarization.
+• Custom reasoning frameworks for handling ambiguous, incomplete or conflicting ERP information.
+
+---------------------------------------------------------------------
+SECTION 3: BACKEND ENGINEERING AND SYSTEM DESIGN
+---------------------------------------------------------------------
+
+Python Engineering:
+• FastAPI for high performance APIs, routing, middleware, background schedulers and async communication.
+• Jinja2 templating for HTML documents including medical reports, ERP summaries and PDFs.
+• Pydantic models for structured validation.
+• Data processing with Pandas, NumPy and optional vectorization.
+
+Node.js Engineering:
+• Axios and node fetch for calling third party APIs including SmartThings, Sonos and Priority.
+• File system automation scripts.
+• Microservices for webhooks, queues, bot backends and cron like schedulers.
+
+DevOps, Infrastructure and Deployment:
+• Docker multi container environments including:
+  - Python backend
+  - React frontend
+  - Nginx reverse proxy
+  - MongoDB or PostgreSQL if required
+• Docker Compose orchestration.
+• SSL certificates via OpenSSL and reverse proxy termination.
+• AWS EC2 deployments: Linux servers, firewall rules, Nginx, PM2, systemctl services.
+• Monitoring logs using journalctl, Docker logs, Nginx logs.
+• Git proficiency including branching models, conflict resolution, cherry picking, resets and pull request flows.
+
+Server Operations:
+• Windows Server 2019 and 2022 experience including:
+  - IIS setups
+  - Firewall configuration
+  - File permissions
+  - User rights management
+• Linux admin basics including system updates, packages, SSH hardening and process management.
+
+---------------------------------------------------------------------
+SECTION 4: AUTOMATION SYSTEMS AND INTEGRATION PROJECTS
+---------------------------------------------------------------------
+
+n8n Automation:
+• API integrations with Priority, Gmail, Telegram, Google Drive, Sheets and custom endpoints.
+• Scenario orchestration including:
+  - Data cleanup
+  - Automated ERP notifications
+  - Scheduled insight generation
+  - Multi system synchronization
+• Building reusable sub workflows and long running processes.
+
+Zapier Automation:
+• Trigger based workflows using webhooks, Priority calls, Google or email events.
+• Automation of business processes like:
+  - Contact creation
+  - Price lookup
+  - Stock availability notifications
+  - Customer onboarding flows
+
+HTTP, Webhooks and API Design:
+• Building enterprise grade webhook listeners for AI tools, Telegram bots and IoT events.
+• JSON RPC design patterns for AI tool calls.
+
+---------------------------------------------------------------------
+SECTION 5: AI + ERP PRODUCTS AND SYSTEMS DEVELOPED
+---------------------------------------------------------------------
+
+1. Priority MCP Server:
+Technologies used:
+• Python, FastAPI, JSON RPC, Docker, SQL, Priority Web SDK.
+• OpenAI for reasoning and structured outputs.
+• LangChain for tool orchestration.
+
+Capabilities:
+• Conversational ERP agent
+• Data retrieval for any table
+• Form operations like insert, update, load
+• Running Priority procedures
+• Automatic insight generation and formatting
+
+2. Priority Intelligent Chatbot:
+• Telegram integration via bot API
+• ERP data retrieval from MCP
+• HTML and Markdown report generation
+• Multi step conversations with context memory
+• Error correction loops and fallback safety nets
+
+3. MedOp AI Medical Opinion Generator:
+Stack:
+• FastAPI backend
+• React frontend
+• LLM reasoning engine
+• Dockerized deployment
+• HTML to PDF engine
+
+Features:
+• Doctor configurable settings stored in backend
+• Highlight driven NLP
+• Clinical structured summary generation
+
+4. IoT AI Systems:
+• SmartThings MCP connector
+• Sonos AI control via local network requests
+• Automation triggers combined with ERP data
+
+---------------------------------------------------------------------
+SECTION 6: FULL TECHNOLOGY STACK LIST
+---------------------------------------------------------------------
+
+Programming Languages:
+• Python, JavaScript, TypeScript, SQL, Bash, PowerShell
+
+Frameworks and Libraries:
+• FastAPI, Node.js, Express (basic), React
+• LangChain, LangGraph, CrewAI, AutoGen
+• Pydantic, Requests, Pandas, NumPy
+• Jinja2 templates
+
+AI and LLM:
+• OpenAI GPT models, embeddings, JSON mode, structured outputs
+
+IoT and Smart Home:
+• SmartThings API
+• MQTT basics
+• Sonos HTTP API
+
+ERP Integration Technologies:
+• Priority Web SDK
+• OData API
+• REST API layer
+• SQL procedures and Priority triggers
+
+Automation Tools:
+• n8n
+• Zapier
+• Postman for API testing
+
+Cloud and DevOps:
+• AWS EC2
+• Nginx reverse proxy
+• Docker and Docker Compose
+• Git and GitHub workflows
+
+Bots and Messaging:
+• Telegram Bot API
+• JSON RPC communication
+• Webhooks, SSE streaming
+
+UI and Frontend:
+• React, Tailwind basics, HTML templates
+
+---------------------------------------------------------------------
+SECTION 7: PROFESSIONAL PHILOSOPHY AND VALUE
+---------------------------------------------------------------------
+
+Sergei’s engineering philosophy:
+• ERP should evolve into intelligent platforms enriched with AI reasoning.
+• Legacy systems can be transformed rather than replaced.
+• Automation is not just workflow, it is intelligence augmentation.
+• AI should provide insight, clarity and operational efficiency.
+• The future of enterprise is hybrid: ERP plus AI plus IoT plus automation.
+
+---------------------------------------------------------------------
+SECTION 8: FUTURE DIRECTION
+---------------------------------------------------------------------
+
+Sergei aims to lead initiatives involving:
+• AI powered ERP modernization
+• Agentic enterprise operations
+• Autonomous workflows bridging systems
+• Enterprise AI governance and structured reasoning safety
+• Combined ERP, IoT and AI operational intelligence ecosystems
+
+END OF DOCUMENT.
