@@ -182,10 +182,38 @@ if __name__ == "__main__":
         button_primary_background_fill_dark="#2563eb",
         button_primary_text_color="#ffffff",
         button_primary_text_color_dark="#ffffff",
+        panel_background_fill="#1a1a1a",
+        panel_background_fill_dark="#1a1a1a",
+        block_background_fill="#0f0f0f",
+        block_background_fill_dark="#0f0f0f",
+        block_label_background_fill="#1a1a1a",
+        block_label_background_fill_dark="#1a1a1a",
+        chatbot_text_color="#ffffff",
+        chatbot_text_color_dark="#ffffff",
     )
     
     # Create a custom interface with dark theme
     with gr.Blocks(title="Career Conversation with Sergei LERNER", theme=dark_theme) as demo:
+        # Inject custom CSS for chatbot dark theme
+        gr.HTML("""
+        <style>
+        .gradio-container {
+            background: #0f0f0f !important;
+        }
+        .chatbot {
+            background: #1a1a1a !important;
+        }
+        .chatbot .message {
+            background: #2a2a2a !important;
+        }
+        .chatbot .message.user {
+            background: #2563eb !important;
+        }
+        .chatbot .message.assistant {
+            background: #2a2a2a !important;
+        }
+        </style>
+        """, visible=False)
         chatbot = gr.Chatbot(
             value=[{"role": "assistant", "content": welcome_message}],
             type="messages",
