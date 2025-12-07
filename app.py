@@ -131,10 +131,17 @@ If the user is engaging in discussion, try to steer them towards getting in touc
 if __name__ == "__main__":
     me = Me()
     
+    # Welcome message from the bot
+    welcome_message = "Hello! I'm Sergei LERNER, an ERP Automation and AI Integration Specialist with over 13 years of experience working with Priority ERP, specializing in system architecture, AI-powered automation solutions, and advanced API integrations. I'm here to answer questions about my career, background, skills, and experience. Feel free to ask me anything!"
+    
     # Create a custom interface
     with gr.Blocks(title="Career Conversation with Sergei LERNER") as demo:
-        # Chat interface
-        gr.ChatInterface(me.chat, type="messages")
+        # Chat interface with initial welcome message
+        gr.ChatInterface(
+            me.chat, 
+            type="messages",
+            value=[[None, welcome_message]]
+        )
     
     demo.launch()
     
