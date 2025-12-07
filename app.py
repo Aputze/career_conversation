@@ -161,8 +161,31 @@ if __name__ == "__main__":
     # Welcome message
     welcome_message = "Hello! I'm Sergei LERNER, an ERP Automation and AI Integration Specialist with over 13 years of experience working with Priority ERP, specializing in system architecture, AI-powered automation solutions, and advanced API integrations. I'm here to answer questions about my career, background, skills, and experience. Feel free to ask me anything!"
     
-    # Create a custom interface
-    with gr.Blocks(title="Career Conversation with Sergei LERNER") as demo:
+    # Create a custom dark theme
+    dark_theme = gr.themes.Soft(
+        primary_hue="blue",
+        secondary_hue="blue",
+    ).set(
+        body_background_fill="#0f0f0f",
+        body_background_fill_dark="#0f0f0f",
+        body_text_color="#ffffff",
+        body_text_color_dark="#ffffff",
+        background_fill_primary="#1a1a1a",
+        background_fill_primary_dark="#1a1a1a",
+        background_fill_secondary="#2a2a2a",
+        background_fill_secondary_dark="#2a2a2a",
+        border_color_primary="#3a3a3a",
+        border_color_primary_dark="#3a3a3a",
+        input_background_fill="#1a1a1a",
+        input_background_fill_dark="#1a1a1a",
+        button_primary_background_fill="#2563eb",
+        button_primary_background_fill_dark="#2563eb",
+        button_primary_text_color="#ffffff",
+        button_primary_text_color_dark="#ffffff",
+    )
+    
+    # Create a custom interface with dark theme
+    with gr.Blocks(title="Career Conversation with Sergei LERNER", theme=dark_theme) as demo:
         chatbot = gr.Chatbot(
             value=[{"role": "assistant", "content": welcome_message}],
             type="messages",
