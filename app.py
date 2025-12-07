@@ -201,14 +201,45 @@ if __name__ == "__main__":
         .chatbot {
             background: #1a1a1a !important;
         }
-        .chatbot .message {
-            background: #2a2a2a !important;
-        }
-        .chatbot .message.user {
+        /* User messages - blue background with white text */
+        .chatbot [data-testid="user"] {
             background: #2563eb !important;
+            color: #ffffff !important;
         }
-        .chatbot .message.assistant {
+        .chatbot [data-testid="user"] .message {
+            background: #2563eb !important;
+            color: #ffffff !important;
+        }
+        .chatbot .user-message {
+            background: #2563eb !important;
+            color: #ffffff !important;
+        }
+        /* Assistant messages - dark gray background with white text */
+        .chatbot [data-testid="assistant"] {
             background: #2a2a2a !important;
+            color: #ffffff !important;
+        }
+        .chatbot [data-testid="assistant"] .message {
+            background: #2a2a2a !important;
+            color: #ffffff !important;
+        }
+        .chatbot .assistant-message {
+            background: #2a2a2a !important;
+            color: #ffffff !important;
+        }
+        /* General message styling */
+        .chatbot .message {
+            color: #ffffff !important;
+        }
+        /* Target user role specifically */
+        div[data-testid="user"],
+        div[role="user"] {
+            background: #2563eb !important;
+            color: #ffffff !important;
+        }
+        div[data-testid="user"] *,
+        div[role="user"] * {
+            color: #ffffff !important;
         }
         </style>
         """, visible=False)
