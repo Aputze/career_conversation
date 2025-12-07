@@ -188,8 +188,6 @@ if __name__ == "__main__":
         block_background_fill_dark="#0f0f0f",
         block_label_background_fill="#1a1a1a",
         block_label_background_fill_dark="#1a1a1a",
-        chatbot_text_color="#ffffff",
-        chatbot_text_color_dark="#ffffff",
     )
     
     # Create a custom interface with dark theme
