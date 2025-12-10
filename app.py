@@ -184,9 +184,40 @@ if __name__ == "__main__":
     
     # Welcome message
     welcome_message = "Hello! I'm Sergei LERNER, an ERP Automation and AI Integration Specialist with over 13 years of experience working with Priority ERP, specializing in system architecture, AI-powered automation solutions, and advanced API integrations. I'm here to answer questions about my career, background, skills, and experience. Feel free to ask me anything!"
+
+    dark_theme_palette = {
+        "body_background_fill": "#0b1220",
+        "background_fill_primary": "#0f172a",
+        "background_fill_secondary": "#0b1220",
+        "block_background_fill": "#0f172a",
+        "block_border_color": "#1f2937",
+        "body_text_color": "#e5e7eb",
+        "body_text_color_subdued": "#cbd5e1",
+        "block_title_text_color": "#f8fafc",
+        "link_text_color": "#93c5fd",
+        "input_background_fill": "#111827",
+        "input_border_color": "#1f2937",
+        "input_placeholder_color": "#94a3b8",
+        "button_primary_background_fill": "#2563eb",
+        "button_primary_background_fill_hover": "#1d4ed8",
+        "button_primary_text_color": "#e5e7eb",
+        "button_secondary_background_fill": "#1f2937",
+        "button_secondary_background_fill_hover": "#111827",
+        "button_secondary_text_color": "#e5e7eb",
+        "color_accent": "#38bdf8",
+        "color_accent_soft": "rgba(56, 189, 248, 0.12)",
+        "border_color_accent": "#38bdf8",
+        "border_color_accent_subdued": "#1f2937",
+        "border_color_primary": "#1f2937",
+    }
+
+    dark_theme = (
+        gr.themes.Base(primary_hue="indigo", neutral_hue="slate")
+        .set(**dark_theme_palette)
+    )
     
     # Create a custom interface
-    with gr.Blocks(title="Career Conversation with Sergei LERNER") as demo:
+    with gr.Blocks(title="Career Conversation with Sergei LERNER", theme=dark_theme) as demo:
         chatbot = gr.Chatbot(
             value=[{"role": "assistant", "content": welcome_message}],
             type="messages",
