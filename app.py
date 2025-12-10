@@ -11,9 +11,9 @@ load_dotenv(override=True)
 
 def push(text):
     api_key = os.getenv("MAILJET_API_KEY")
-    api_secret = os.getenv("MAILJET_API_SECRET")
-    from_email = os.getenv("MAILJET_FROM_EMAIL")
-    to_email = os.getenv("MAILJET_TO_EMAIL")
+    api_secret = os.getenv("MAILJET_SECRET_KEY") or os.getenv("MAILJET_API_SECRET")
+    from_email = os.getenv("MAILJET_SENDER_EMAIL") or os.getenv("MAILJET_FROM_EMAIL")
+    to_email = os.getenv("MAILJET_RECIPIENT_EMAIL") or os.getenv("MAILJET_TO_EMAIL")
 
     if not all([api_key, api_secret, from_email, to_email]):
         print("Mailjet env vars missing; notification skipped.", flush=True)
