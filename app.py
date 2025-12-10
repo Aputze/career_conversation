@@ -10,14 +10,38 @@ import gradio as gr
 load_dotenv(override=True)
 
 def push(text):
-    requests.post(
-        "https://api.pushover.net/1/messages.json",
-        data={
-            "token": os.getenv("PUSHOVER_TOKEN"),
-            "user": os.getenv("PUSHOVER_USER"),
-            "message": text,
-        }
-    )
+    api_key = os.getenv("MAILJET_API_KEY")
+    api_secret = os.getenv("MAILJET_API_SECRET")
+    from_email = os.getenv("MAILJET_FROM_EMAIL")
+    to_email = os.getenv("MAILJET_TO_EMAIL")
+
+    if not all([api_key, api_secret, from_email, to_email]):
+        print("Mailjet env vars missing; notification skipped.", flush=True)
+        return {"sent": False, "error": "missing_mailjet_env_vars"}
+
+    payload = {
+        "Messages": [
+            {
+                "From": {"Email": from_email},
+                "To": [{"Email": to_email}],
+                "Subject": "Career Conversation notification",
+                "TextPart": text,
+            }
+        ]
+    }
+
+    try:
+        response = requests.post(
+            "https://api.mailjet.com/v3.1/send",
+            auth=(api_key, api_secret),
+            json=payload,
+            timeout=10,
+        )
+        response.raise_for_status()
+        return {"sent": True}
+    except requests.RequestException as exc:
+        print(f"Mailjet send failed: {exc}", flush=True)
+        return {"sent": False, "error": str(exc)}
 
 
 def record_user_details(email, name="Name not provided", notes="not provided"):
