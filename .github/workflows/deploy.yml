@@ -1,38 +1,28 @@
-name: Deploy to Hugging Face Spaces
+name: Deploy to Hugging Face Space
 
 on:
-  workflow_dispatch:  # Manual trigger only
   push:
-    tags:
-      - 'v*'  # Only deploy on version tags
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: github.ref_type == 'tag'
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
+      - name: Configure git
+        run: |
+          git config --global user.email "ci@aputze.dev"
+          git config --global user.name "GitHub Actions"
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install huggingface_hub
-
-    - name: Deploy to Hugging Face Spaces
-      env:
-        HF_TOKEN: ${{ secrets.HF_TOKEN }}
-      run: |
-        echo "Starting deployment to Hugging Face Spaces..."
-        gradio deploy \
-          --title "Career Conversation with Sergei LERNER" \
-          --description "AI-powered career conversation chatbot" \
-          --app-file app.py \
-          --space-name career-conversation-sergei-lerner
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git remote add space https://aputze:${HF_TOKEN}@huggingface.co/spaces/aputze/Career_Conversation || true
+          git remote set-url space https://aputze:${HF_TOKEN}@huggingface.co/spaces/aputze/Career_Conversation
+          git push space main --force
